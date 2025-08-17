@@ -4,7 +4,7 @@ export const baseApi = createApi({
     reducerPath: "api",
     tagTypes: ["Post", "Comment", "User"],
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://your-express-backend.onrender.com',
+        baseUrl: 'https://blog-pet.onrender.com',
         prepareHeaders: (headers) => {
             const token = localStorage.getItem("token");
             if (token) {
