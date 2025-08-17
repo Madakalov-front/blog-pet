@@ -1,32 +1,33 @@
 import express, { Application } from "express";
 import cors from "cors";
 import {
-  AuthCheckRoute,
-  AuthRoute,
-  CommentCreateRoute,
-  CommentDeleteRoute,
-  CommentsForPostRoute,
-  PostCreateRoute,
-  PostEditRoute,
-  PostRemoveRoute,
-  PostRoute,
-  PostsRoute,
-  PostsSearchRoute,
-  RegisterRoute,
-  UserDeleteRoute,
-  UserEditRoleRoute,
-  UsersRoute,
+    AuthCheckRoute,
+    AuthRoute,
+    CommentCreateRoute,
+    CommentDeleteRoute,
+    CommentsForPostRoute,
+    PostCreateRoute,
+    PostEditRoute,
+    PostRemoveRoute,
+    PostRoute,
+    PostsRoute,
+    PostsSearchRoute,
+    RegisterRoute,
+    UserDeleteRoute,
+    UserEditRoleRoute,
+    UsersRoute,
 } from "./routes";
 
 const app: Application = express();
-const port: number = 8080;
+const port = process.env.PORT || 8080;
 app.use(express.json());
 app.use(
-  cors({
-    origin: true,
-    credentials: true,
-    exposedHeaders: ["Authorization"],
-  })
+    cors({
+        origin: ["https://blog-pet-seven.vercel.app/", "http://localhost:5173"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        credentials: true,
+        exposedHeaders: ["Authorization"],
+    })
 );
 
 const defaultUrl = "/";
@@ -52,5 +53,5 @@ app.use(defaultUrl, CommentCreateRoute);
 app.use(defaultUrl, CommentDeleteRoute);
 
 app.listen(port, () => {
-  console.log(`🚀 Server is running on port ${port}`);
+    console.log(`🚀 Server is running on port ${port}`);
 });
