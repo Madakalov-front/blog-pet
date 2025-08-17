@@ -1,0 +1,49 @@
+.header-action {
+    display: grid;
+    row-gap: toRem(12);
+    column-gap: toRem(14);
+    grid-template-columns: repeat(4, toRem(32));
+    @include MQmin($mobile-xl) {
+        grid-template-columns: repeat(3, toRem(32));
+    }
+    @include MQmax($mobile-xl) {
+        margin-left: auto;
+    }
+    // .header-action__item
+    &__item {
+        // .header-action__item--login
+        &--login {
+            height: toRem(35);
+            display: flex;
+            align-items: center;
+            column-gap: toRem(10);
+            font-weight: 600;
+            position: relative;
+            @include MQmin($mobile-xl) {
+                grid-area: 1 / 1 / 2 / 4;
+                place-self: center end;
+            }
+            svg {
+                width: fit-content;
+                height: toRem(24);
+                transition: transform var(--duration) var(--ease);
+                color: var(--orange);
+                @include hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        // .header-action__item--registered
+        &--registered {
+        }
+
+        // .header-action__item--users-list
+        &--users-list {
+        }
+
+        // .header-action__item--new-article
+        &--new-article {
+        }
+    }
+}

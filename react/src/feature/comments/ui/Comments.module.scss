@@ -1,0 +1,6 @@
+.commets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: toRem(20);
+    padding-block: toRem(80);
+}

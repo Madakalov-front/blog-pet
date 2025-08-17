@@ -1,0 +1,9 @@
+<svg viewBox="0 0 120 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<!-- Монитор -->
+	<rect x="20" y="2" width="80" height="50" rx="4" stroke="#4A90E2" stroke-width="2" />
+	<rect x="40" y="56" width="40" height="6" rx="3" fill="#4A90E2" />
+	<!-- Кодовые стрелки -->
+	<path d="M42 26L38 30L42 34" stroke="#4A90E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+	<path d="M78 26L82 30L78 34" stroke="#4A90E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+	<path d="M58 25L62 35" stroke="#4A90E2" stroke-width="2" stroke-linecap="round" />
+</svg>

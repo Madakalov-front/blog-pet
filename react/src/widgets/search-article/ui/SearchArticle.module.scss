@@ -1,0 +1,101 @@
+.search-article {
+    padding: toRem(24) 0;
+
+    .container {
+        max-width: toRem(800);
+        margin: 0 auto;
+        padding: 0 toRem(16);
+    }
+
+    .form-search {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(8);
+
+        &__search {
+            width: 100%;
+            padding: toRem(12) toRem(90) toRem(12) toRem(16);
+            font-size: toRem(16);
+            border: toRem(1) solid var(--grey-100);
+            border-radius: toRem(8);
+            outline: none;
+            transition: border-color 0.2s;
+
+            &:focus {
+                border-color: #007bff;
+            }
+        }
+        form {
+            position: relative;
+        }
+        &__action {
+            position: absolute;
+            right: toRem(12);
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+        }
+
+        &__button-clear {
+            background: none;
+            border: none;
+            color: #888;
+            font-size: toRem(14);
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.2s;
+
+            &:hover {
+                color: #333;
+            }
+        }
+
+        p {
+            color: red;
+            font-size: toRem(14);
+            margin: 0;
+            height: 1lh;
+        }
+    }
+
+    .search-list {
+        margin-top: toRem(-12);
+        border: toRem(1) solid #ddd;
+        border-radius: toRem(8);
+        background: #fff;
+        box-shadow: 0 toRem(4) toRem(12) rgba(0, 0, 0, 0.05);
+        list-style: none;
+        padding: toRem(8) 0;
+        max-height: toRem(300);
+        overflow-y: auto;
+        animation: fadeInUp 0.2s ease-out;
+
+        li {
+            padding: toRem(8) toRem(16);
+            transition: background-color 0.2s;
+
+            &:hover {
+                background: #f0f0f0;
+            }
+
+            a {
+                text-decoration: none;
+                color: #333;
+                font-size: toRem(15);
+            }
+        }
+    }
+}
+
+// Плавное появление
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(toRem(8));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

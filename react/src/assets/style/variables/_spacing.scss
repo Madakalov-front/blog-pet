@@ -1,0 +1,10 @@
+@use "../mixins/media.scss" as *;
+@use "../variables/breakpoints" as *;
+
+$padding-inline: 15;
+@include MQmin($tablet-xl) {
+    $padding-inline: 75;
+}
+@include MQmin($mobile) {
+    $padding-inline: 35;
+}

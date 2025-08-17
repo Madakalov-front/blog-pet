@@ -1,0 +1,10 @@
+@mixin MQmin($breakpoint) {
+    @media (min-width: calc($breakpoint + 1px)) {
+        @content;
+    }
+}
+@mixin MQmax($breakpoint) {
+    @media (max-width: calc($breakpoint)) {
+        @content;
+    }
+}

@@ -1,0 +1,20 @@
+.header {
+    -webkit-box-shadow: toRem(0) toRem(8) toRem(15) toRem(6) rgba(34, 60, 80, 0.12);
+    -moz-box-shadow: toRem(0) toRem(8) toRem(15) toRem(6) rgba(34, 60, 80, 0.12);
+    box-shadow: toRem(0) toRem(8) toRem(15) toRem(6) rgba(34, 60, 80, 0.12);
+    background-color: var(--light);
+
+    // .header__inner
+    &__inner {
+        display: flex;
+        padding-block: toRem(35);
+        @include MQmin($mobile-xl) {
+            align-items: center;
+            justify-content: space-between;
+        }
+        @include MQmax($mobile-xl) {
+            flex-direction: column;
+            row-gap: toRem(10);
+        }
+    }
+}

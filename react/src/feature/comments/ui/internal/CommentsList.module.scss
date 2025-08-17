@@ -1,0 +1,57 @@
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(16);
+    padding: toRem(24);
+    background-color: #ffffff;
+    border-radius: toRem(12);
+    box-shadow: 0 toRem(2) toRem(8) rgba(0, 0, 0, 0.05);
+    grid-column: 2 / 4;
+    position: relative;
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: toRem(12);
+        padding: toRem(16);
+        border: toRem(1) solid #e0e0e0;
+        border-radius: toRem(8);
+        background-color: #fafafa;
+        transition: background-color 0.3s ease;
+        &:hover {
+            background-color: #f0f0f0;
+        }
+
+        time {
+            font-size: toRem(12);
+            color: #888;
+            display: block;
+            margin-bottom: toRem(8);
+        }
+        h3 {
+            font-size: toRem(16);
+            font-weight: 600;
+            color: #222;
+            margin-bottom: toRem(6);
+            max-width: toRem(290);
+        }
+
+        p {
+            font-size: toRem(14);
+            color: #444;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        button {
+            flex-shrink: 0;
+            width: toRem(24);
+            height: toRem(24);
+            align-self: flex-start;
+            transition: color var(--duration) var(--ease);
+            @include hover {
+                color: var(--error);
+            }
+        }
+    }
+}

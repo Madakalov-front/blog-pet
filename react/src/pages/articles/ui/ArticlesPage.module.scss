@@ -1,0 +1,10 @@
+.articles-page {
+    // .articles-page__inner
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(toRem(400), auto);
+        gap: toRem(20);
+    }
+}

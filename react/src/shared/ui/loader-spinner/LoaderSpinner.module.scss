@@ -1,0 +1,28 @@
+.loader-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--light-o40);
+    &::before {
+        content: "";
+        height: clamp(toRem(15), 70%, toRem(40));
+        aspect-ratio: 1;
+        border: toRem(2) solid rgba(0, 0, 0, 0.1);
+        border-top: toRem(2) solid var(--error);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

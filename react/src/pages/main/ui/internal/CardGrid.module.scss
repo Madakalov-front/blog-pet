@@ -1,0 +1,46 @@
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: toRem(50);
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: toRem(24);
+        width: 100%;
+    }
+
+    &__item {
+        background-color: #f0f0f0;
+        border-radius: toRem(12);
+        box-shadow: 0 toRem(2) toRem(6) rgba(0, 0, 0, 0.08);
+        width: 100%;
+    }
+
+    &__pagination {
+        display: flex;
+        gap: toRem(8);
+        margin-top: toRem(32);
+    }
+
+    &__page {
+        background: none;
+        border: none;
+        padding: toRem(8) toRem(16);
+        border-radius: toRem(8);
+        cursor: pointer;
+        font-size: toRem(16);
+        color: #333;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #e0e0e0;
+        }
+
+        &--active {
+            background-color: #007bff;
+            color: #fff;
+        }
+    }
+}

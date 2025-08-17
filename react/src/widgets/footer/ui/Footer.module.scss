@@ -1,0 +1,19 @@
+.footer {
+    padding: toRem(32) 0;
+    background-color: var(--light-100);
+    color: var(--dark);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: toRem(16);
+    }
+
+    h2 {
+        font-size: toRem(20);
+        font-weight: 600;
+        margin: 0;
+    }
+}

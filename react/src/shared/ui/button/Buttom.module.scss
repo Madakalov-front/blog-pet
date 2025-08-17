@@ -1,0 +1,42 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+    color: var(--blue);
+    border: toRem(1) solid var(--grey-100);
+
+    border-radius: toRem(4);
+    text-transform: uppercase;
+    letter-spacing: toRem(1);
+    transition-property: background-color, border-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--ease);
+
+    // variant
+    &--submit {
+        background-color: var(--yellow);
+        @include hover {
+            background-color: transparent;
+            border-color: var(--yellow);
+        }
+    }
+
+    // size
+    &--small {
+        padding-block: toRem(8);
+        padding-inline: toRem(16);
+        font-size: toRem(14);
+    }
+    &--normal {
+        padding-block: toRem(15);
+        padding-inline: toRem(25);
+        font-size: toRem(18);
+    }
+
+    &:disabled {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+}

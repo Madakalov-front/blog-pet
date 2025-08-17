@@ -1,0 +1,27 @@
+.link-icon {
+    width: fit-content;
+    height: toRem(24);
+    transition: transform var(--duration) var(--ease);
+
+    @include hover {
+        transform: scale(1.1);
+    }
+
+    &--users-list,
+    &--new-article {
+        color: var(--yellow);
+    }
+
+    // .link-icon--back-link
+    &--back-link {
+        color: var(--orange);
+    }
+
+    // .link-icon--users-list
+    &--users-list {
+    }
+
+    // .link-icon--new-article
+    &--new-article {
+    }
+}

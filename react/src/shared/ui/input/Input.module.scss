@@ -1,0 +1,35 @@
+.field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: toRem(1) solid var(--grey-100);
+    border-radius: toRem(4);
+    padding: toRem(12) toRem(16);
+
+    & + & {
+        margin-top: toRem(12);
+    }
+
+    &__input {
+        &--text,
+        &--password {
+            width: 100%;
+        }
+    }
+    &[data-error-message] {
+        position: relative;
+        &::after {
+            content: attr(data-error-message);
+            position: absolute;
+            top: calc(100% + toRem(2));
+            left: 0;
+            font-size: toRem(12);
+            color: var(--error);
+        }
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        appearance: none;
+        display: none;
+    }
+}

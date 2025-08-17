@@ -1,0 +1,22 @@
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(5);
+
+    // .logo__img
+    &__img {
+        flex-shrink: 0;
+        width: toRem(70);
+        height: toRem(52);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .logo__content
+
+    &__content {
+        font-size: toRem(18);
+        font-weight: 700;
+    }
+}

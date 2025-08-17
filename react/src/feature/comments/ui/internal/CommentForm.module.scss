@@ -1,0 +1,68 @@
+.comments-text-area {
+    padding: toRem(24);
+    background-color: #ffffff;
+    border-radius: toRem(12);
+    box-shadow: 0 toRem(4) toRem(12) rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: toRem(16);
+    height: fit-content;
+    position: sticky;
+    top: toRem(20);
+    left: 0;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(12);
+    }
+
+    textarea {
+        width: 100%;
+        min-height: toRem(120);
+        padding: toRem(12);
+        border: toRem(1) solid #ccc;
+        border-radius: toRem(8);
+        font-size: toRem(14);
+        line-height: 1.5;
+        resize: vertical;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        &:disabled {
+            background-color: #f2f2f2;
+            cursor: not-allowed;
+        }
+    }
+
+    &__info {
+        font-size: toRem(12);
+        color: #666;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__error {
+        color: #d32f2f;
+        font-size: toRem(12);
+        margin-top: toRem(4);
+    }
+
+    &__login-hint {
+        font-size: toRem(14);
+        color: #444;
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            display: inline;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
