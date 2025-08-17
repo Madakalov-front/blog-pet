@@ -31,7 +31,7 @@ export default defineConfig({
         open: true,
         proxy: {
             "/api": {
-                target: "https://blog-pet-seven.vercel.app/",
+                target: "https://blog-pet.onrender.com",
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/api/, ""),
                 headers: {
