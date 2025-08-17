@@ -23,7 +23,7 @@ const port = process.env.PORT || 8080;
 app.use(express.json());
 app.use(
     cors({
-        origin: ["https://blog-pet-seven.vercel.app/", "http://localhost:5173"],
+        origin: ["https://blog-pet-seven.vercel.app", "http://localhost:5173"],
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true,
         exposedHeaders: ["Authorization"],
