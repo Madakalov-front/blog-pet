@@ -12,49 +12,59 @@
 🔗 **Демо:** [blog-pet-seven.vercel.app](https://blog-pet-seven.vercel.app/)  
 📦 **Репозиторий:** [GitHub](https://github.com/Madakalov-front/blog-pet)
 
+## 🔑 Тестовые аккаунты
+
+Для проверки функционала доступен аккаунт администратора:
+
+-   **Login:** `egor`
+-   **Password:** `qazwsx1234`
+
 ---
 
 ## ⚡️ Функционал
 
-- 🔐 Авторизация / регистрация пользователей (JWT)
-- 📝 Создание, редактирование и удаление постов
-- 🔎 Поиск и фильтрация статей
-- 🎨 Адаптивный интерфейс
-- 💾 Подключение к базе данных PostgreSQL
+-   🔐 Авторизация / регистрация пользователей (JWT)
+-   📝 Создание, редактирование и удаление постов
+-   🔎 Поиск и фильтрация статей
+-   🎨 Адаптивный интерфейс
+-   💾 Подключение к базе данных PostgreSQL
 
 ---
 
 ## 🛠️ Технологии
 
 ### Frontend
-- [React 19](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [React Router v7](https://reactrouter.com/)
-- [Redux Toolkit](https://redux-toolkit.js.org/)
-- [React Hook Form](https://react-hook-form.com/)
-- [Zod](https://zod.dev/) — валидация форм
-- [Sass](https://sass-lang.com/) — стилизация
-- [FontAwesome](https://fontawesome.com/) — иконки
+
+-   [React 19](https://react.dev/)
+-   [Vite](https://vitejs.dev/)
+-   [React Router v7](https://reactrouter.com/)
+-   [Redux Toolkit](https://redux-toolkit.js.org/)
+-   [React Hook Form](https://react-hook-form.com/)
+-   [Zod](https://zod.dev/) — валидация форм
+-   [Sass](https://sass-lang.com/) — стилизация
+-   [FontAwesome](https://fontawesome.com/) — иконки
 
 ### Backend
-- [Express](https://expressjs.com/)
-- [PostgreSQL](https://www.postgresql.org/) + [pg](https://www.npmjs.com/package/pg)
-- [JWT](https://jwt.io/) — аутентификация
-- [bcrypt](https://www.npmjs.com/package/bcrypt) — хеширование паролей
-- [dotenv](https://www.npmjs.com/package/dotenv) — переменные окружения
-- [CORS](https://www.npmjs.com/package/cors)
+
+-   [Express](https://expressjs.com/)
+-   [PostgreSQL](https://www.postgresql.org/) + [pg](https://www.npmjs.com/package/pg)
+-   [JWT](https://jwt.io/) — аутентификация
+-   [bcrypt](https://www.npmjs.com/package/bcrypt) — хеширование паролей
+-   [dotenv](https://www.npmjs.com/package/dotenv) — переменные окружения
+-   [CORS](https://www.npmjs.com/package/cors)
 
 ---
 
 ## 📂 Структура проекта
 
+```bash
 blog-pet/
-├── backend/ # Серверная часть (Express + PostgreSQL)
-│ ├── src/
-│ └── dist/
-├── frontend/ # Клиентская часть (React + Vite)
-│ ├── src/
-│ └── public/
+├── backend/        # Серверная часть (Express + PostgreSQL)
+│   ├── src/
+│   └── dist/
+├── react/       # Клиентская часть (React + Vite)
+│   ├── src/
+│   └── public/
 └── README.md
 
 
@@ -62,6 +72,7 @@ blog-pet/
 
 ## 🌍 Деплой
 
-Локальный запуск **не предусмотрен**, проект развернут на Vercel.  
+Локальный запуск **не предусмотрен**, проект развернут на Vercel.
 👉 [Перейти к демо](https://blog-pet-seven.vercel.app/)
 
+```
