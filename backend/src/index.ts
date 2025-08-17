@@ -24,8 +24,9 @@ app.use(express.json());
 app.use(
     cors({
         origin: ["https://blog-pet-seven.vercel.app", "http://localhost:5173"],
-        methods: ["GET", "POST", "PUT", "DELETE"],
+        methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
         credentials: true,
+         allowedHeaders: ['Content-Type', 'Authorization'],
         exposedHeaders: ["Authorization"],
     })
 );
