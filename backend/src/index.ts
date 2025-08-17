@@ -20,16 +20,28 @@ import {
 
 const app: Application = express();
 const port = process.env.PORT || 8080;
+const corsOptions = {
+    origin: [
+        "https://blog-pet-seven.vercel.app",
+        "http://localhost:5173",
+        "https://blog-pet.onrender.com", // Добавьте это
+    ],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], // Добавьте OPTIONS
+    credentials: true,
+    allowedHeaders: [
+        "Content-Type",
+        "Authorization",
+        "Origin",
+        "X-Requested-With",
+        "Accept",
+    ],
+    exposedHeaders: ["Authorization"],
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+};
 app.use(express.json());
-app.use(
-    cors({
-        origin: ["https://blog-pet-seven.vercel.app", "http://localhost:5173"],
-        methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-        credentials: true,
-         allowedHeaders: ['Content-Type', 'Authorization'],
-        exposedHeaders: ["Authorization"],
-    })
-);
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 const defaultUrl = "/";
 
