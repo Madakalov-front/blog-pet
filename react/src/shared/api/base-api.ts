@@ -10,6 +10,8 @@ export const baseApi = createApi({
             if (token) {
                 headers.set("Authorization", `Bearer ${JSON.parse(token)}`);
             }
+            headers.set('Access-Control-Allow-Origin', 'https://blog-pet-seven.vercel.app');
+      headers.set('Access-Control-Allow-Credentials', 'true');
             return headers;
         },
     }),
